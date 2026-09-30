@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fbf7f4">
   <title>Lindoju Beauty | Beauty Studio München</title>
-  <meta name="description" content="Lindoju Beauty in München – Diodenlaser Haarentfernung, Korean Skin Care, Microneedling und professionelles Make-up in hochwertigem Ambiente.">
+  <meta name="description" content="Lindoju Beauty in München – Diodenlaser Haarentfernung, Korean Skin Care, Microneedling und professionelles Make-up in stilvollem Ambiente.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
@@ -14,20 +15,20 @@
 <body>
   <div class="site-shell">
     <header class="site-header" id="top">
-      <div class="container header-inner">
+      <div class="container header-main">
         <a class="brand" href="#top" aria-label="Lindoju Beauty Startseite">
-          <span class="brand-mark"></span>
+          <span class="brand-mark" aria-hidden="true"></span>
           <span class="brand-copy">
             <strong>Lindoju Beauty</strong>
             <small>Beauty Studio München</small>
           </span>
         </a>
 
-        <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav">
           <span></span><span></span><span></span>
         </button>
 
-        <nav class="site-nav">
+        <nav class="site-nav" id="site-nav">
           <a href="#leistungen">Leistungen</a>
           <a href="#studio">Studio</a>
           <a href="#inhaberin">Inhaberin</a>
@@ -37,83 +38,52 @@
         </nav>
       </div>
 
-      <div class="header-quick-wrap">
-        <div class="container header-quick" aria-label="Schnellkontakt">
-          <a class="header-quick-link location" href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen&query_place_id=ChIJPXd77TbfnUcRtaC3cV6AazM" target="_blank" rel="noopener">
-            <span class="quick-symbol">⌖</span>
-            <span><strong>Adresse</strong><span class="quick-value">Corneliusstraße 38, 80469 München</span></span>
+      <div class="contact-strip">
+        <div class="container contact-grid">
+          <a class="contact-tile" href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">⌖</span>
+            <span class="contact-copy">
+              <strong>Adresse</strong>
+              <span>Corneliusstraße 38, 80469 München</span>
+              <small>Route öffnen →</small>
+            </span>
           </a>
-          <a class="header-quick-link" href="tel:+4915237687835">
-            <span class="quick-symbol">☎</span>
-            <span><strong>Telefon</strong><span class="quick-value">01523 7687835</span></span>
-          </a>
-          <a class="header-quick-link" href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen&query_place_id=ChIJPXd77TbfnUcRtaC3cV6AazM" target="_blank" rel="noopener">
-            <span class="quick-symbol">★</span>
-            <span><strong>4,9 Google</strong><span class="quick-value">27 Rezensionen</span></span>
+          <a class="contact-tile" href="tel:+4915237687835">
+            <span class="contact-icon" aria-hidden="true">☎</span>
+            <span class="contact-copy">
+              <strong>Telefon</strong>
+              <span>01523 7687835</span>
+              <small>Jetzt anrufen →</small>
+            </span>
           </a>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero section-tight">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
-            <p class="eyebrow">Premium Beauty Studio in München</p>
-            <h1>Seidig glatte Haut, gepflegte Hautbilder und ein edles Studioerlebnis.</h1>
-            <p class="hero-text">Lindoju Beauty verbindet moderne Diodenlaser-Technologie, hochwertige Gesichtsbehandlungen und professionelles Make-up in einer stilvollen, ruhigen und hochwertigen Umgebung im Herzen von München.</p>
+            <p class="eyebrow">Beauty Studio München</p>
+            <h1>Glatte Haut. Gepflegter Glow. Ein Studio zum Wohlfühlen.</h1>
+            <p class="hero-text">Lindoju Beauty verbindet moderne Diodenlaser-Technologie, hochwertige Gesichtsbehandlungen und professionelles Make-up in einem stilvollen, ruhigen Ambiente in München.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#preise">Preise ansehen</a>
-              <a class="button button-secondary" href="#kontakt">Termin anfragen</a>
+              <a class="button button-secondary" href="tel:+4915237687835">Termin anfragen</a>
             </div>
-            <div class="trust-points">
-              <a href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen&query_place_id=ChIJPXd77TbfnUcRtaC3cV6AazM" target="_blank" rel="noopener">
-                <strong>4,9 ★</strong><span>Google-Bewertung</span><small>ansehen →</small>
+            <div class="trust-grid">
+              <a class="trust-card" href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen" target="_blank" rel="noopener">
+                <strong>4,9 ★</strong>
+                <span>Google-Bewertung</span>
+                <small>Bewertungen ansehen →</small>
               </a>
-              <a href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen&query_place_id=ChIJPXd77TbfnUcRtaC3cV6AazM" target="_blank" rel="noopener">
-                <strong>27+</strong><span>Rezensionen</span><small>lesen →</small>
-              </a>
-              <button type="button" data-open-nisv>
-                <strong>NiSV</strong><span>Fachkunde</span><small>Erklärung →</small>
+              <button class="trust-card trust-button" type="button" data-open-nisv>
+                <strong>NiSV</strong>
+                <span>Fachkunde</span>
+                <small>Was bedeutet das? →</small>
               </button>
             </div>
           </div>
-
-          <div class="hero-media reveal delay-1">
-            <figure class="media-card media-card-main">
-              <img src="studio-lounge.jpg" alt="Empfangsbereich von Lindoju Beauty in München">
-            </figure>
-            <figure class="media-card media-card-top">
-              <img src="treatment-room.jpg" alt="Behandlungsraum im Studio">
-            </figure>
-            <figure class="media-card media-card-bottom">
-              <img src="diode-laser-clean.jpg" alt="Moderne Diodenlaser Behandlung bei Lindoju Beauty">
-            </figure>
-            <div class="floating-price-card">
-              <span>Ganzkörper Haarentfernung</span>
-              <strong>350 €</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="info-ribbon reveal">
-        <div class="container info-grid">
-          <a class="info-card" href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen&query_place_id=ChIJPXd77TbfnUcRtaC3cV6AazM" target="_blank" rel="noopener">
-            <strong>Standort</strong>
-            <span>Corneliusstraße 38, 80469 München</span>
-            <small>Route in Google Maps öffnen →</small>
-          </a>
-          <a class="info-card" href="tel:+4915237687835">
-            <strong>Telefon</strong>
-            <span>01523 7687835</span>
-            <small>Jetzt anrufen →</small>
-          </a>
-          <a class="info-card" href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen&query_place_id=ChIJPXd77TbfnUcRtaC3cV6AazM" target="_blank" rel="noopener">
-            <strong>4,9 ★ Google</strong>
-            <span>27 Rezensionen</span>
-            <small>Bewertungen ansehen →</small>
-          </a>
         </div>
       </section>
 
@@ -121,23 +91,25 @@
         <div class="container">
           <div class="section-head reveal">
             <p class="eyebrow">Leistungen</p>
-            <h2>Individuelle Beauty-Treatments für glatte Haut, gepflegten Glow und besondere Anlässe.</h2>
-            <p>Jede Behandlung ist auf ein sauberes, hochwertiges und entspanntes Gesamterlebnis ausgerichtet.</p>
+            <h2>Beauty-Treatments für glatte Haut, gepflegten Glow und besondere Anlässe.</h2>
+            <p>Alle Leistungen sind direkt mit der passenden Preisübersicht verknüpft.</p>
           </div>
 
           <div class="service-grid">
-            <article class="service-card reveal price-jump" data-price-tab="women" tabindex="0" role="button" aria-label="Preise für dauerhafte Haarentfernung anzeigen">
+            <article class="service-card price-jump reveal" data-price-tab="women" data-price-key="fullbody" tabindex="0" role="button" aria-label="Preise für dauerhafte Haarentfernung anzeigen">
               <span class="service-index">01</span>
+              <div class="service-badge">Ganzkörper 350 €</div>
               <h3>Dauerhafte Haarentfernung</h3>
-              <p>Effektive Diodenlaser-Technologie für Frauen und Männer – sanft, modern und auf langfristig glatte Haut ausgerichtet.</p>
+              <p>Moderne Diodenlaser-Technologie für Frauen und Männer – sanft, präzise und auf langfristig glatte Haut ausgerichtet.</p>
               <ul>
-                <li>Ganzkörper ab 350 €</li>
+                <li>Ganzkörper 350 €</li>
                 <li>Einzelzonen für Gesicht &amp; Körper</li>
                 <li>Frauen &amp; Männer</li>
               </ul>
-              <span class="service-link">Preise anzeigen →</span>
+              <span class="service-link">Preise ansehen →</span>
             </article>
-            <article class="service-card reveal delay-1 price-jump" data-price-tab="facecare" tabindex="0" role="button" aria-label="Preise für Korean Skin Care anzeigen">
+
+            <article class="service-card price-jump reveal delay-1" data-price-tab="facecare" data-price-key="korean" tabindex="0" role="button" aria-label="Preise für Korean Skin Care anzeigen">
               <span class="service-index">02</span>
               <h3>Korean Skin Care</h3>
               <p>Pflegende Gesichtsbehandlungen für mehr Frische, Reinheit und ein strahlendes Hautbild.</p>
@@ -146,30 +118,51 @@
                 <li>Mit Massage &amp; Pflegesöckchen 200 €</li>
                 <li>Sanfte Wohlfühlbehandlung</li>
               </ul>
-              <span class="service-link">Preise anzeigen →</span>
+              <span class="service-link">Preise ansehen →</span>
             </article>
-            <article class="service-card reveal delay-2 price-jump" data-price-tab="facecare" tabindex="0" role="button" aria-label="Preis für Microneedling anzeigen">
+
+            <article class="service-card price-jump reveal delay-2" data-price-tab="facecare" data-price-key="microneedling" tabindex="0" role="button" aria-label="Preis für Microneedling anzeigen">
               <span class="service-index">03</span>
               <h3>Microneedling</h3>
-              <p>Gezielte Behandlung zur Unterstützung eines ebenmäßigeren und frischeren Hautbilds.</p>
+              <p>Gezielte Behandlung zur Unterstützung eines ebenmäßigeren, frischeren und gepflegteren Hautbilds.</p>
               <ul>
                 <li>Microneedling 100 €</li>
                 <li>Professionell &amp; sorgfältig</li>
-                <li>Für einen glatten Glow</li>
+                <li>Für einen frischen Glow</li>
               </ul>
-              <span class="service-link">Preis anzeigen →</span>
+              <span class="service-link">Preis ansehen →</span>
             </article>
-            <article class="service-card reveal delay-3 price-jump" data-price-tab="makeup" tabindex="0" role="button" aria-label="Make-up Preise anzeigen">
+
+            <article class="service-card price-jump reveal delay-3" data-price-tab="makeup" data-price-key="makeup" tabindex="0" role="button" aria-label="Preise für professionelles Make-up anzeigen">
               <span class="service-index">04</span>
               <h3>Professionelles Make-up</h3>
-              <p>Stilvoll abgestimmtes Make-up für Alltag, Abendtermine und besondere Events wie Hochzeiten.</p>
+              <p>Stilvoll abgestimmtes Make-up für Tageslooks, Abendtermine und besondere Anlässe.</p>
               <ul>
                 <li>Tages Make-up 80 €</li>
                 <li>Abend Make-up 150 €</li>
                 <li>Braut Make-up 350 €</li>
               </ul>
-              <span class="service-link">Preise anzeigen →</span>
+              <span class="service-link">Preise ansehen →</span>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section studio-section" id="studio">
+        <div class="container studio-grid">
+          <div class="studio-copy reveal">
+            <p class="eyebrow">Studio</p>
+            <h2>Ein ruhiges, modernes Ambiente mit Liebe zum Detail.</h2>
+            <p>Zarte Rosé-, Creme- und Goldtöne, klare Linien und sorgfältig ausgewählte Details schaffen eine Atmosphäre, die feminin, hochwertig und professionell wirkt.</p>
+            <div class="mini-points">
+              <span>Modern &amp; gepflegt</span>
+              <span>Ruhige Atmosphäre</span>
+              <span>Persönliche Betreuung</span>
+            </div>
+          </div>
+          <div class="studio-gallery reveal delay-1">
+            <figure><img src="treatment-room.jpg" alt="Heller Behandlungsraum von Lindoju Beauty"></figure>
+            <figure><img src="studio-lounge.jpg" alt="Eleganter Studio- und Wartebereich von Lindoju Beauty"></figure>
           </div>
         </div>
       </section>
@@ -178,66 +171,32 @@
         <div class="container founder-grid">
           <div class="founder-media reveal">
             <figure class="founder-card">
-              <img src="founder-portrait.png" alt="Porträt der Inhaberin von Lindoju Beauty">
+              <img src="founder-portrait.png" alt="Inhaberin von Lindoju Beauty">
             </figure>
           </div>
           <div class="founder-copy reveal delay-1">
             <p class="eyebrow">Inhaberin</p>
-            <h2>Persönliche Betreuung mit einem sicheren Gespür für Ästhetik, Pflege und stilvolle Ergebnisse.</h2>
-            <p>Hinter Lindoju Beauty steht eine Inhaberin mit Liebe zum Detail, einem hohen Qualitätsanspruch und dem Wunsch, jeder Kundin und jedem Kunden ein schönes, entspanntes und hochwertiges Erlebnis zu bieten.</p>
-            <p>Im Mittelpunkt stehen eine gepflegte Atmosphäre, sorgfältige Arbeit und Behandlungen, die sowohl professionell als auch persönlich wirken – von moderner Haarentfernung bis hin zu Beauty- und Skin-Care-Treatments.</p>
+            <h2>Persönliche Betreuung mit Liebe zum Detail.</h2>
+            <p>Hinter Lindoju Beauty steht ein hoher Anspruch an Qualität, Atmosphäre und persönliche Betreuung. Das Ziel ist ein Beauty-Erlebnis, das professionell, entspannt und individuell wirkt – vom ersten Gespräch bis zum Ergebnis.</p>
             <div class="founder-note">
               <strong>Lindoju Beauty</strong>
-              <span>Beauty Studio München – stilvoll, modern und persönlich.</span>
+              <span>Stilvoll. Modern. Persönlich.</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section signature">
-        <div class="container signature-grid">
-          <div class="signature-copy reveal">
-            <p class="eyebrow">Studio Erlebnis</p>
-            <h2>Ruhig, modern und hochwertig – ein Besuch, der sich genauso gut anfühlt, wie er aussieht.</h2>
-            <p>Lindoju Beauty steht für eine saubere, stilvolle Atmosphäre mit eleganten Rosé-, Creme- und Goldtönen. So entsteht ein Ambiente, das zugleich feminin, edel und professionell wirkt.</p>
-            <div class="signature-points">
-              <div><strong>Modernes Studio</strong><span>mit eleganter Einrichtung</span></div>
-              <div><strong>Präzise Arbeit</strong><span>mit Fokus auf sichtbare Ergebnisse</span></div>
-              <div><strong>Persönlicher Service</strong><span>in entspannter Atmosphäre</span></div>
-            </div>
+      <section class="section treatment-section" id="behandlungen">
+        <div class="container treatment-grid">
+          <div class="treatment-copy reveal">
+            <p class="eyebrow">Behandlungen &amp; Ergebnisse</p>
+            <h2>Moderne Technik und sichtbare Ergebnisse.</h2>
+            <p>Die Diodenlaser-Behandlung ist auf eine präzise, komfortable und professionelle Anwendung ausgelegt. Vorher-Nachher-Ergebnisse zeigen, wie sich das Hautbild im Verlauf verändern kann.</p>
+            <a class="text-link price-jump-link" href="#preise" data-price-tab="women" data-price-key="fullbody">Laserpreise ansehen →</a>
           </div>
-          <div class="signature-media reveal delay-1">
-            <figure class="signature-main">
-              <img src="studio-entrance.jpg" alt="Eleganter Spiegel- und Eingangsbereich von Lindoju Beauty">
-            </figure>
-            <figure class="signature-side top">
-              <img src="treatment-room.jpg" alt="Heller Behandlungsraum von Lindoju Beauty">
-            </figure>
-            <figure class="signature-side bottom">
-              <img src="studio-lounge.jpg" alt="Lounge Bereich im Studio">
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="section results" id="studio">
-        <div class="container results-grid">
-          <div class="results-copy reveal">
-            <p class="eyebrow">Ergebnisse & Technik</p>
-            <h2>Moderne Technik und Treatments mit Fokus auf gepflegte, glatte und schöne Resultate.</h2>
-            <p>Ob Gesicht, Körper oder Gesichtsbehandlung – das Ziel ist ein angenehmes Behandlungserlebnis in Verbindung mit einem sichtbar gepflegten Ergebnis.</p>
-            <div class="quote-card">
-              <p>„Seidig glatte Haut ohne ständiges Rasieren oder Waxing.“</p>
-              <span>Ein zentraler Fokus der Diodenlaser-Behandlung</span>
-            </div>
-          </div>
-          <div class="results-media reveal delay-1">
-            <figure class="result-large">
-              <img src="before-after-clean.jpg" alt="Vorher-Nachher Ergebnis der Haarentfernung am Kinn">
-            </figure>
-            <figure class="result-small">
-              <img src="diode-laser-clean.jpg" alt="Laser Haarentfernung mit Diodenlaser">
-            </figure>
+          <div class="treatment-gallery reveal delay-1">
+            <figure><img src="before-after-clean.jpg" alt="Vorher-Nachher Ergebnis einer Haarentfernung am Kinn"></figure>
+            <figure><img src="diode-laser-clean.jpg" alt="Diodenlaser-Behandlung bei Lindoju Beauty"></figure>
           </div>
         </div>
       </section>
@@ -246,19 +205,22 @@
         <div class="container">
           <div class="section-head reveal">
             <p class="eyebrow">Preise</p>
-            <h2>Transparente Preisübersicht für Haarentfernung, Gesichtsbehandlungen und Make-up.</h2>
+            <h2>Transparente Preise – übersichtlich nach Behandlung.</h2>
           </div>
 
-          <div class="price-tabs reveal delay-1">
-            <button class="tab-button active" data-tab="women">Frauen</button>
-            <button class="tab-button" data-tab="men">Männer</button>
-            <button class="tab-button" data-tab="facecare">Gesichtsbehandlung</button>
-            <button class="tab-button" data-tab="makeup">Make-up</button>
+          <div class="price-tabs reveal delay-1" role="tablist" aria-label="Preiskategorien">
+            <button class="tab-button active" type="button" data-tab="women" role="tab" aria-selected="true">Frauen</button>
+            <button class="tab-button" type="button" data-tab="men" role="tab" aria-selected="false">Männer</button>
+            <button class="tab-button" type="button" data-tab="facecare" role="tab" aria-selected="false">Gesichtsbehandlung</button>
+            <button class="tab-button" type="button" data-tab="makeup" role="tab" aria-selected="false">Make-up</button>
           </div>
 
           <div class="price-panels reveal delay-2">
-            <div class="price-panel active" id="women">
-              <div class="price-highlight"><span>Ganzkörper Haarentfernung</span><strong>350 €</strong></div>
+            <div class="price-panel active" id="women" role="tabpanel">
+              <div class="price-highlight" data-price-key="fullbody">
+                <span>Ganzkörper Haarentfernung</span>
+                <strong>350 €</strong>
+              </div>
               <div class="price-columns">
                 <ul class="price-list">
                   <li><span>Gesicht</span><strong>60 €</strong></li>
@@ -291,7 +253,8 @@
                 </ul>
               </div>
             </div>
-            <div class="price-panel" id="men">
+
+            <div class="price-panel" id="men" role="tabpanel">
               <div class="price-columns single-column">
                 <ul class="price-list">
                   <li><span>Bart</span><strong>70 €</strong></li>
@@ -306,18 +269,20 @@
                 </ul>
               </div>
             </div>
-            <div class="price-panel" id="facecare">
+
+            <div class="price-panel" id="facecare" role="tabpanel">
               <div class="price-columns single-column">
                 <ul class="price-list">
-                  <li><span>Korean Skin Care</span><strong>150 €</strong></li>
+                  <li data-price-key="korean"><span>Korean Skin Care</span><strong>150 €</strong></li>
                   <li><span>Korean Skin Care + Massage &amp; Pflegesöckchen</span><strong>200 €</strong></li>
-                  <li><span>Microneedling</span><strong>100 €</strong></li>
+                  <li data-price-key="microneedling"><span>Microneedling</span><strong>100 €</strong></li>
                 </ul>
               </div>
             </div>
-            <div class="price-panel" id="makeup">
+
+            <div class="price-panel" id="makeup" role="tabpanel">
               <div class="price-columns single-column">
-                <ul class="price-list">
+                <ul class="price-list" data-price-key="makeup">
                   <li><span>Tages Make-up</span><strong>80 €</strong></li>
                   <li><span>Abend Make-up</span><strong>150 €</strong></li>
                   <li><span>Braut Make-up</span><strong>350 €</strong></li>
@@ -328,63 +293,60 @@
         </div>
       </section>
 
-      <section class="section cta-section">
+      <section class="section cta-section" id="kontakt">
         <div class="container cta-card reveal">
           <div>
-            <p class="eyebrow">Jetzt anfragen</p>
-            <h2>Du möchtest einen Termin oder hast Fragen zu einer Behandlung?</h2>
-            <p>Schreibe direkt über Instagram, rufe an oder sende eine E-Mail – Lindoju Beauty freut sich auf deine Anfrage.</p>
+            <p class="eyebrow">Kontakt</p>
+            <h2>Termin oder Frage zu einer Behandlung?</h2>
+            <p>Rufe direkt an oder schreibe über Instagram.</p>
           </div>
           <div class="cta-actions">
             <a class="button button-primary" href="tel:+4915237687835">Jetzt anrufen</a>
-            <a class="button button-secondary" href="mailto:lindojubeauty@gmail.com">E-Mail senden</a>
+            <a class="button button-secondary" href="https://www.instagram.com/lindojubeauty?stkn=Ym91bG9nODZuYW1q" target="_blank" rel="noopener">Instagram öffnen</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer" id="kontakt">
+    <footer class="site-footer">
       <div class="container footer-grid">
         <div>
           <p class="eyebrow">Lindoju Beauty</p>
           <h3>Beauty Studio München</h3>
-          <p>Hochwertige Beauty-Behandlungen in stilvollem Ambiente – von dauerhafter Haarentfernung bis Korean Skin Care und Make-up.</p>
+          <p>Diodenlaser, Korean Skin Care, Microneedling und professionelles Make-up in stilvollem Ambiente.</p>
         </div>
         <div>
           <h4>Kontakt</h4>
           <ul class="footer-list">
-            <li><a href="https://maps.google.com/?q=Corneliusstraße+38+80469+München" target="_blank" rel="noopener">Corneliusstraße 38, 80469 München</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Lindoju%20Beauty%20Laser%20Haarentfernung%20M%C3%BCnchen" target="_blank" rel="noopener">Corneliusstraße 38, 80469 München</a></li>
             <li><a href="tel:+4915237687835">01523 7687835</a></li>
             <li><a href="https://www.instagram.com/lindojubeauty?stkn=Ym91bG9nODZuYW1q" target="_blank" rel="noopener">@lindojubeauty</a></li>
           </ul>
         </div>
         <div>
-          <h4>Schnellzugriff</h4>
+          <h4>Navigation</h4>
           <ul class="footer-list">
             <li><a href="#leistungen">Leistungen</a></li>
             <li><a href="#studio">Studio</a></li>
             <li><a href="#inhaberin">Inhaberin</a></li>
             <li><a href="#preise">Preise</a></li>
-            <li><a href="#top">Nach oben</a></li>
           </ul>
         </div>
       </div>
-      <div class="container footer-bottom">
-        <p>© <span id="year"></span> Lindoju Beauty. Alle Rechte vorbehalten.</p>
-      </div>
+      <div class="container footer-bottom">© <span id="year"></span> Lindoju Beauty. Alle Rechte vorbehalten.</div>
     </footer>
   </div>
 
-  <dialog class="info-dialog" id="nisv-dialog" aria-labelledby="nisv-title">
-    <div class="dialog-card">
-      <button class="dialog-close" type="button" aria-label="Fenster schließen" data-close-nisv>×</button>
-      <p class="eyebrow">NiSV Fachkunde</p>
-      <h2 id="nisv-title">Was bedeutet NiSV?</h2>
-      <p>NiSV steht für die Verordnung zum Schutz vor schädlichen Wirkungen nichtionisierender Strahlung bei der Anwendung am Menschen.</p>
-      <p>Für bestimmte kosmetische Laser- und Lichtanwendungen gelten Anforderungen an Fachkunde, sicheren Betrieb und Schutzmaßnahmen. Die Angabe „NiSV Fachkunde“ weist auf die entsprechende fachliche Qualifikation für solche Anwendungen hin.</p>
-      <button class="button button-primary dialog-ok" type="button" data-close-nisv>Schließen</button>
+  <div class="modal" id="nisv-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="nisv-title">
+    <div class="modal-backdrop" data-close-nisv></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" type="button" aria-label="Erklärung schließen" data-close-nisv>×</button>
+      <p class="eyebrow">NiSV</p>
+      <h2 id="nisv-title">Was bedeutet NiSV-Fachkunde?</h2>
+      <p>Die NiSV regelt in Deutschland den sicheren Einsatz bestimmter nichtionisierender Strahlungsquellen am Menschen. Für entsprechende Anwendungen sind je nach Verfahren fachliche Kenntnisse und vorgeschriebene Qualifikationen erforderlich.</p>
+      <p class="modal-note">Die Angabe auf der Website bezieht sich auf die vom Studio kommunizierte NiSV-Fachkunde.</p>
     </div>
-  </dialog>
+  </div>
 
   <script src="script.js"></script>
 </body>
