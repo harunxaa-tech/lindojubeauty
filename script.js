@@ -15,16 +15,33 @@ if (menuToggle && siteNav) {
   });
 }
 
-const tabs = document.querySelectorAll('.tab-button');
-const panels = document.querySelectorAll('.price-panel');
+const tabs = [...document.querySelectorAll('.tab-button')];
+const panels = [...document.querySelectorAll('.price-panel')];
+
+function activatePriceTab(tabId, shouldScroll = false) {
+  tabs.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tabId));
+  panels.forEach(panel => panel.classList.toggle('active', panel.id === tabId));
+
+  if (shouldScroll) {
+    document.getElementById('preise')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.setTimeout(() => {
+      document.querySelector(`.tab-button[data-tab="${tabId}"]`)?.focus({ preventScroll: true });
+    }, 650);
+  }
+}
 
 tabs.forEach(button => {
-  button.addEventListener('click', () => {
-    const tab = button.dataset.tab;
-    tabs.forEach(btn => btn.classList.remove('active'));
-    panels.forEach(panel => panel.classList.remove('active'));
-    button.classList.add('active');
-    document.getElementById(tab)?.classList.add('active');
+  button.addEventListener('click', () => activatePriceTab(button.dataset.tab));
+});
+
+document.querySelectorAll('.price-jump').forEach(card => {
+  const go = () => activatePriceTab(card.dataset.priceTab, true);
+  card.addEventListener('click', go);
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      go();
+    }
   });
 });
 
@@ -38,20 +55,23 @@ document.querySelectorAll('[data-close-nisv]').forEach(button => {
   button.addEventListener('click', () => nisvDialog?.close());
 });
 nisvDialog?.addEventListener('click', event => {
-  const rect = nisvDialog.getBoundingClientRect();
-  const inside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
-  if (!inside) nisvDialog.close();
+  if (event.target === nisvDialog) nisvDialog.close();
 });
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.08 });
+}, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
+
+window.addEventListener('load', () => {
+  window.scrollTo({ top: 0, behavior: 'auto' });
+});
