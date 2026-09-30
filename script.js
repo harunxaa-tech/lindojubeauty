@@ -94,3 +94,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+
+// Always start at the top on a fresh open/reload instead of restoring an old scroll position.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+function forceTopOnInitialOpen() {
+  window.scrollTo(0, 0);
+}
+window.addEventListener('pageshow', forceTopOnInitialOpen);
+window.addEventListener('load', () => {
+  forceTopOnInitialOpen();
+  window.setTimeout(forceTopOnInitialOpen, 80);
+});
