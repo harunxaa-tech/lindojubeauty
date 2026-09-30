@@ -517,3 +517,19 @@ h1,h2,h3,h4{margin:0 0 16px;font-family:"Cormorant Garamond",Georgia,serif;font-
 
 .footer-social-pill .brand-social-icon{width:19px;height:19px;flex-basis:19px;border-radius:6px}
 .footer-social-pill .brand-social-whatsapp{border-radius:50%}
+
+
+/* Version 18 — before/after card: preserve the existing card size, never crop labels */
+.treatment-gallery .before-after-card{
+  aspect-ratio:3/4!important;
+  width:100%!important;
+  overflow:hidden!important;
+}
+.treatment-gallery .before-after-image{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  display:block!important;
+  background:#f8f2ee;
+}
