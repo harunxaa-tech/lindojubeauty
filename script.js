@@ -28,20 +28,30 @@ tabs.forEach(button => {
   });
 });
 
-const observer = new IntersectionObserver((entries) => {
+const nisvDialog = document.getElementById('nisv-dialog');
+document.querySelectorAll('[data-open-nisv]').forEach(button => {
+  button.addEventListener('click', () => {
+    if (nisvDialog?.showModal) nisvDialog.showModal();
+  });
+});
+document.querySelectorAll('[data-close-nisv]').forEach(button => {
+  button.addEventListener('click', () => nisvDialog?.close());
+});
+nisvDialog?.addEventListener('click', event => {
+  const rect = nisvDialog.getBoundingClientRect();
+  const inside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+  if (!inside) nisvDialog.close();
+});
+
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.14 });
+}, { threshold: 0.08 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-const year = document.getElementById('year');
-if (year) year.textContent = new Date().getFullYear();
-
-window.addEventListener('load', () => {
-  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
-});
+document.getElementById('year').textContent = new Date().getFullYear();
