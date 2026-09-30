@@ -279,3 +279,94 @@ h1,h2,h3,h4{margin:0 0 16px;font-family:"Cormorant Garamond",Georgia,serif;font-
     border-radius: 20px !important;
   }
 }
+
+/* WhatsApp contact additions */
+.nav-whatsapp{color:var(--gold-deep)!important;font-weight:800!important}
+.button-whatsapp{background:#ffffff;border:1px solid rgba(37,211,102,.38);color:#2f6d45;box-shadow:0 12px 26px rgba(37,211,102,.10)}
+.button-whatsapp:hover,.button-whatsapp:focus-visible{box-shadow:0 15px 30px rgba(37,211,102,.16)}
+.quick-contact-phone{cursor:default}
+.quick-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.quick-actions a{color:var(--gold-deep);font-size:.76rem;font-weight:800}
+.quick-actions a.quick-whatsapp{color:#2f6d45}
+.footer-whatsapp-link{display:inline-flex;align-items:center;gap:8px;font-weight:700!important;opacity:1!important}
+@media(max-width:720px){
+  .hero-actions .button-whatsapp{width:100%}
+  .quick-actions{gap:14px}
+  .quick-actions a{font-size:.72rem}
+}
+
+/* Version 12 refinements: owner spacing + real social-logo controls */
+.social-logo{
+  display:inline-grid;
+  place-items:center;
+  width:24px;
+  height:24px;
+  flex:0 0 24px;
+}
+.social-logo svg{width:100%;height:100%;display:block;overflow:visible}
+.social-logo-instagram svg rect,
+.social-logo-instagram svg circle{fill:none;stroke:currentColor;stroke-width:1.8}
+.social-logo-instagram .social-dot{fill:currentColor;stroke:none}
+.social-logo-whatsapp svg path{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.social-logo-whatsapp .wa-phone{stroke-width:1.45}
+.button .social-logo{margin-right:9px;width:21px;height:21px;flex-basis:21px}
+.button-whatsapp{color:#247a47}
+.button-instagram{color:#7c4a64}
+
+/* Owner label now sits above the portrait; old slogan card is intentionally removed. */
+.founder-section{padding-top:42px!important;padding-bottom:36px!important}
+.founder-eyebrow{margin-bottom:18px!important}
+.founder-grid{align-items:center}
+.founder-copy{padding-top:0}
+.price-section{padding-top:38px!important}
+
+/* Footer social cards: entire logo/card is clickable. */
+.footer-social-item{margin-top:12px!important}
+.footer-social-link{
+  display:flex!important;
+  align-items:center;
+  gap:12px;
+  width:min(100%,340px);
+  min-height:64px;
+  padding:11px 14px;
+  border-radius:17px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.14);
+  opacity:1!important;
+  transition:transform .2s ease,background .2s ease,border-color .2s ease;
+}
+.footer-social-link:hover,.footer-social-link:focus-visible{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.15);
+  border-color:rgba(255,255,255,.22);
+}
+.footer-social-link>.social-logo{
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  padding:7px;
+  border-radius:12px;
+  background:rgba(255,255,255,.11);
+}
+.footer-social-link>span:last-child{display:flex;flex-direction:column;gap:2px}
+.footer-social-link strong{font-size:.94rem;color:#fffaf6}
+.footer-social-link small{font-size:.72rem;color:rgba(255,250,246,.78)}
+.footer-instagram-link .social-logo{color:#fffaf6}
+.footer-whatsapp-link .social-logo{color:#d5f5df}
+
+/* Mobile side menu social rows */
+@media(max-width:980px){
+  .site-nav>a.social-link{justify-content:flex-start;gap:11px}
+  .site-nav>a.social-link .social-arrow{margin-left:auto}
+  .site-nav>a.social-link:not(.nav-cta)::after{content:none}
+}
+
+/* Compact owner-to-prices rhythm on phones. */
+@media(max-width:720px){
+  .founder-section{padding-top:32px!important;padding-bottom:24px!important}
+  .founder-eyebrow{margin-bottom:14px!important}
+  .founder-grid{gap:18px!important}
+  .founder-copy h2{margin-bottom:12px}
+  .founder-copy p{margin-bottom:0}
+  .price-section{padding-top:28px!important}
+}
