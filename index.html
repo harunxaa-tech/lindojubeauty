@@ -28,15 +28,31 @@
           <span></span><span></span><span></span>
         </button>
 
-        <nav class="site-nav" id="site-nav">
+        <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+          <div class="mobile-menu-head">
+            <div class="mobile-menu-brand">
+              <span class="brand-mark menu-brand-mark" aria-hidden="true"></span>
+              <span>
+                <strong>Lindoju Beauty</strong>
+                <small>Beauty Studio München</small>
+              </span>
+            </div>
+            <button class="menu-close" type="button" aria-label="Menü schließen">×</button>
+          </div>
+          <div class="mobile-menu-kicker">Menü</div>
           <a href="#studio">Studio</a>
           <a href="#leistungen">Leistungen</a>
           <a href="#behandlungen">Ergebnisse</a>
           <a href="#inhaberin">Inhaberin</a>
           <a href="#preise">Preise</a>
-          <a href="https://www.instagram.com/lindojubeauty?stkn=Ym91bG9nODZuYW1q" target="_blank" rel="noopener">Instagram</a>
+          <a class="nav-instagram" href="https://www.instagram.com/lindojubeauty?stkn=Ym91bG9nODZuYW1q" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a>
           <a class="nav-cta" href="tel:+4915237687835">Termin anfragen</a>
+          <div class="mobile-menu-footer">
+            <span>Corneliusstraße 38, 80469 München</span>
+            <a href="tel:+4915237687835">01523 7687835</a>
+          </div>
         </nav>
+        <button class="nav-backdrop" type="button" aria-label="Menü schließen" tabindex="-1"></button>
       </div>
 
       <div class="header-contact-strip" aria-label="Schnellkontakt">

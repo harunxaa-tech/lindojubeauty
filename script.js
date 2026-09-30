@@ -1,15 +1,26 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
+const menuClose = document.querySelector('.menu-close');
+const navBackdrop = document.querySelector('.nav-backdrop');
+
+function setMenu(open) {
+  if (!menuToggle || !siteNav) return;
+  siteNav.classList.toggle('open', open);
+  navBackdrop?.classList.toggle('open', open);
+  document.body.classList.toggle('menu-open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  if (open) window.setTimeout(() => menuClose?.focus(), 120);
+}
 
 if (menuToggle && siteNav) {
-  menuToggle.addEventListener('click', () => {
-    const open = siteNav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.addEventListener('click', () => setMenu(!siteNav.classList.contains('open')));
+  menuClose?.addEventListener('click', () => setMenu(false));
+  navBackdrop?.addEventListener('click', () => setMenu(false));
+  siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980 && siteNav.classList.contains('open')) setMenu(false);
   });
-  siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    siteNav.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  }));
 }
 
 const tabButtons = [...document.querySelectorAll('.tab-button')];
@@ -68,6 +79,7 @@ openNisvButtons.forEach(button => button.addEventListener('click', openNisv));
 closeNisvButtons.forEach(button => button.addEventListener('click', closeNisv));
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && modal?.classList.contains('open')) closeNisv();
+  if (event.key === 'Escape' && siteNav?.classList.contains('open')) setMenu(false);
 });
 
 const observer = new IntersectionObserver(entries => {
