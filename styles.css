@@ -1,3 +1,9 @@
+/* Locally hosted, OFL-licensed original fonts: no third-party font request. */
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 700;font-display:swap;src:url("fonts/manrope-latin-400-700.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:800;font-display:swap;src:url("fonts/manrope-latin-800.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/cormorant-garamond-latin-500.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/cormorant-garamond-latin-600.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/cormorant-garamond-latin-700.woff2") format("woff2")}
 :root {
   --bg:#f7f0ed;
   --bg-soft:#fcf8f5;
