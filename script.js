@@ -37,6 +37,11 @@ function activateTab(tabId) {
 
 tabButtons.forEach(button => button.addEventListener('click', () => activateTab(button.dataset.tab)));
 
+const linkedPriceTab = new URLSearchParams(window.location.search).get('tab');
+if (['women', 'men', 'facecare', 'makeup'].includes(linkedPriceTab)) {
+  activateTab(linkedPriceTab);
+}
+
 function goToPrice(tabId) {
   activateTab(tabId);
   const priceSection = document.getElementById('preise');
@@ -95,13 +100,22 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
-// Always start at the top on a fresh open/reload instead of restoring an old scroll position.
+// Open direct links to a specific section while keeping reloads at the top.
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-function forceTopOnInitialOpen() {
+const pageNavigation = window.performance?.getEntriesByType?.('navigation')?.[0];
+const isPageReload = pageNavigation?.type === 'reload';
+function positionPageOnInitialOpen() {
+  if (!isPageReload && window.location.hash) {
+    const section = document.getElementById(window.location.hash.slice(1));
+    if (section) {
+      section.scrollIntoView({ behavior: 'instant', block: 'start' });
+      return;
+    }
+  }
   window.scrollTo(0, 0);
 }
-window.addEventListener('pageshow', forceTopOnInitialOpen);
+window.addEventListener('pageshow', positionPageOnInitialOpen);
 window.addEventListener('load', () => {
-  forceTopOnInitialOpen();
-  window.setTimeout(forceTopOnInitialOpen, 80);
+  positionPageOnInitialOpen();
+  window.setTimeout(positionPageOnInitialOpen, 80);
 });
