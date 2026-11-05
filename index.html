@@ -92,8 +92,10 @@
   }
 }
   </script>
+  <link rel="preload" href="fonts/manrope-latin-400-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="styles.css?v=22">
+  <link rel="stylesheet" href="styles.css?v=23">
 </head>
 <body>
   <div class="site-shell">
@@ -199,8 +201,8 @@
       <section class="section studio-section" id="studio">
         <div class="container studio-grid">
           <div class="studio-gallery reveal">
-            <figure><img src="treatment-room.jpg" alt="Heller Behandlungsraum von Lindoju Beauty"></figure>
-            <figure><img src="studio-lounge.jpg" alt="Eleganter Studio- und Wartebereich von Lindoju Beauty"></figure>
+            <figure><img src="treatment-room.jpg" alt="Heller Behandlungsraum von Lindoju Beauty" width="709" height="860" loading="lazy" decoding="async"></figure>
+            <figure><img src="studio-lounge.jpg" alt="Eleganter Studio- und Wartebereich von Lindoju Beauty" width="709" height="865" loading="lazy" decoding="async"></figure>
           </div>
           <div class="studio-copy reveal delay-1">
             <p class="eyebrow">Studio</p>
@@ -291,8 +293,8 @@
             <a class="text-link seo-treatment-link" href="laser-haarentfernung-muenchen.html">Mehr über Laser-Haarentfernung in München →</a>
           </div>
           <div class="treatment-gallery reveal delay-1">
-            <figure class="before-after-card"><img class="before-after-image" src="before-after-clean.jpg?v=18" alt="Vorher-Nachher-Aufnahme zur Laser-Haarentfernung mit Diodenlaser bei Lindoju Beauty"></figure>
-            <figure><img src="diode-laser-clean.jpg" alt="Diodenlaser für Laser-Haarentfernung bei Lindoju Beauty in München"></figure>
+            <figure class="before-after-card"><img class="before-after-image" src="before-after-clean.jpg?v=18" alt="Vorher-Nachher-Aufnahme zur Laser-Haarentfernung mit Diodenlaser bei Lindoju Beauty" width="900" height="1200" loading="lazy" decoding="async"></figure>
+            <figure><img src="diode-laser-clean.jpg" alt="Diodenlaser für Laser-Haarentfernung bei Lindoju Beauty in München" width="900" height="1200" loading="lazy" decoding="async"></figure>
           </div>
         </div>
       </section>
@@ -303,7 +305,7 @@
           <div class="founder-grid">
             <div class="founder-media reveal">
               <figure class="founder-card">
-                <img src="founder-portrait.png" alt="Inhaberin von Lindoju Beauty">
+                <img src="founder-portrait.png" alt="Inhaberin von Lindoju Beauty" loading="lazy" decoding="async">
               </figure>
             </div>
             <div class="founder-copy reveal delay-1">
@@ -458,30 +460,10 @@
           <span>WhatsApp</span>
         </a>
       </div>
-      <div class="container footer-bottom">© <span id="year"></span> Lindoju Beauty. Alle Rechte vorbehalten. <span aria-hidden="true">·</span> <a href="impressum.html">Impressum</a> <span aria-hidden="true">·</span> <a href="datenschutz.html">Datenschutz</a> <span aria-hidden="true">·</span> <button type="button" class="privacy-settings-link" data-privacy-open>Cookie-Einstellungen</button></div>
+      <div class="container footer-bottom">© <span id="year"></span> Lindoju Beauty. Alle Rechte vorbehalten. <span aria-hidden="true">·</span> <a href="impressum.html">Impressum</a> <span aria-hidden="true">·</span> <a href="datenschutz.html">Datenschutz</a></div>
     </footer>
   </div>
-
-  <section class="privacy-banner" id="privacy-banner" role="region" aria-labelledby="privacy-title" aria-describedby="privacy-description">
-    <div class="privacy-banner-inner">
-      <div class="privacy-banner-copy">
-        <p class="privacy-kicker">Privatsphäre bei Lindoju Beauty</p>
-        <h2 id="privacy-title">Deine Datenschutzeinstellungen</h2>
-        <p id="privacy-description">Unsere Website verwendet keine Analyse- oder Werbe-Cookies. Nur mit deiner Zustimmung laden wir Google Fonts von Google-Servern. Dabei wird deine IP-Adresse an Google übertragen. Ohne Zustimmung bleibt die Website vollständig nutzbar. <a href="datenschutz.html">Mehr in der Datenschutzerklärung</a>.</p>
-        <div class="privacy-details" id="privacy-details" hidden>
-          <label class="privacy-choice"><input type="checkbox" id="privacy-fonts-optin"><span><strong>Externe Schriftarten (Google Fonts)</strong><small>Optional: Verbindung zu Google zur Darstellung der Web-Schriftarten. Ohne Einwilligung werden lokale Standardschriftarten verwendet.</small></span></label>
-          <p class="privacy-essential">Notwendig: Deine Auswahl wird ausschließlich in diesem Browser gespeichert, damit wir dich nicht bei jedem Besuch erneut fragen.</p>
-        </div>
-      </div>
-      <div class="privacy-actions">
-        <button type="button" class="privacy-action privacy-action-neutral" data-privacy-reject>Nur notwendige</button>
-        <button type="button" class="privacy-action privacy-action-neutral" data-privacy-settings>Einstellungen</button>
-        <button type="button" class="privacy-action privacy-action-accept" data-privacy-accept>Alle akzeptieren</button>
-        <button type="button" class="privacy-action privacy-action-save" data-privacy-save hidden>Auswahl speichern</button>
-      </div>
-    </div>
-  </section>
-  <div class="modal" id="nisv-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="nisv-title">
+<div class="modal" id="nisv-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="nisv-title">
     <div class="modal-backdrop" data-close-nisv></div>
     <div class="modal-card" role="document">
       <button class="modal-close" type="button" aria-label="Erklärung schließen" data-close-nisv>×</button>
@@ -493,6 +475,6 @@
   </div>
 
   <script src="script.js?v=21"></script>
-  <script src="consent.js?v=2"></script>
+  <script>try{localStorage.removeItem("lindoju-privacy-choice-v1")}catch(_){}</script>
 </body>
 </html>
