@@ -890,3 +890,28 @@ h1,h2,h3,h4{margin:0 0 16px;font-family:"Cormorant Garamond",Georgia,serif;font-
 .footer-bottom a{color:#fffaf6;opacity:.9;text-decoration:underline;text-underline-offset:3px}
 .legal-header-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 17px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.75);color:var(--text);font-weight:800;font-size:.84rem}
 @media(max-width:720px){.legal-main{padding:46px 0 60px}.legal-card{padding:22px;border-radius:24px}.legal-contact{grid-template-columns:1fr}.legal-intro h1{font-size:3.3rem}.legal-header-link{min-height:42px;padding:0 14px;font-size:.8rem}}
+
+/* Datenschutz und zustimmungsbasierte externe Schriftarten (v21) */
+.privacy-banner[hidden], .privacy-details[hidden], .privacy-action[hidden]{display:none!important}
+.privacy-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;padding:16px;max-height:min(85vh,720px);overflow-y:auto;background:rgba(36,28,25,.36);box-shadow:0 -12px 40px rgba(39,25,22,.12)}
+.privacy-banner-inner{width:min(1120px,100%);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:24px 28px;background:#fffaf7;color:var(--text);border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 70px rgba(40,24,18,.14)}
+.privacy-banner-copy{min-width:0;max-width:700px}
+.privacy-kicker{font-size:.72rem;text-transform:uppercase;font-weight:800;letter-spacing:.1em;color:var(--gold-deep);margin:0 0 6px}
+.privacy-banner h2{font-size:clamp(1.75rem,3vw,2.3rem);margin:0 0 7px}
+.privacy-banner p{font-size:.88rem;line-height:1.55;margin:0}
+.privacy-banner p a{text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.privacy-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;min-width:260px;max-width:340px}
+.privacy-action{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;min-height:45px;border-radius:999px;font:700 .84rem "Manrope",system-ui,sans-serif;cursor:pointer;transition:background .18s ease,border-color .18s ease}
+.privacy-action-neutral{border:1px solid #916a39;background:#fffaf7;color:#5a3c2a}
+.privacy-action-accept,.privacy-action-save{background:#765437;color:white;border:1px solid #765437}
+.privacy-action:hover{filter:brightness(.95)}
+.privacy-action:focus-visible,.privacy-settings-link:focus-visible{outline:3px solid #a5753b;outline-offset:2px}
+.privacy-details{margin-top:14px;padding:15px;background:#f8efea;border:1px solid var(--line);border-radius:16px}
+.privacy-choice{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+.privacy-choice input{margin-top:4px;width:19px;height:19px;flex:0 0 auto;accent-color:#765437}
+.privacy-choice span{display:block}.privacy-choice strong{display:block;font-size:.9rem}.privacy-choice small{display:block;color:var(--muted);font-size:.8rem;line-height:1.5;margin-top:4px}
+.privacy-essential{margin-top:12px!important;font-size:.78rem!important;color:var(--muted)}
+.privacy-settings-link{border:0;padding:0;background:none;text-decoration:underline;text-underline-offset:3px;color:inherit;cursor:pointer;font-size:inherit;font-family:inherit}
+.legal-card a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+.legal-card ul{margin:0 0 16px;padding-left:23px;color:var(--muted);line-height:1.7}
+@media(max-width:760px){.privacy-banner{padding:10px;max-height:85dvh}.privacy-banner-inner{display:block;padding:18px;border-radius:18px}.privacy-actions{max-width:none;min-width:0;justify-content:stretch;margin-top:15px;display:grid;grid-template-columns:1fr 1fr}.privacy-action{padding:11px 12px}.privacy-action-accept{grid-column:1/-1}.privacy-action-save{grid-column:1/-1}.privacy-banner h2{font-size:1.9rem}.privacy-banner p{font-size:.83rem}}
