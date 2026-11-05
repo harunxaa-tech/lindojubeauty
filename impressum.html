@@ -8,11 +8,8 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://lindojubeauty.de/impressum.html">
   <meta name="description" content="Impressum von Lindoju Beauty, Beauty Studio in München. Informationen zu Inhaberin und Kontakt.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=21">
 </head>
 <body>
   <div class="site-shell">
@@ -85,11 +82,32 @@
             <li><a href="index.html#leistungen">Leistungen</a></li>
             <li><a href="index.html#preise">Preise</a></li>
             <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
           </ul>
         </div>
       </div>
-      <div class="container footer-bottom">© 2026 Lindoju Beauty. Alle Rechte vorbehalten. <span aria-hidden="true">·</span> <a href="impressum.html">Impressum</a></div>
+      <div class="container footer-bottom">© 2026 Lindoju Beauty. Alle Rechte vorbehalten. <span aria-hidden="true">·</span> <a href="impressum.html">Impressum</a> <span aria-hidden="true">·</span> <a href="datenschutz.html">Datenschutz</a> <span aria-hidden="true">·</span> <button type="button" class="privacy-settings-link" data-privacy-open>Cookie-Einstellungen</button></div>
     </footer>
   </div>
+  <section class="privacy-banner" id="privacy-banner" role="region" aria-labelledby="privacy-title" aria-describedby="privacy-description" hidden>
+    <div class="privacy-banner-inner">
+      <div class="privacy-banner-copy">
+        <p class="privacy-kicker">Privatsphäre bei Lindoju Beauty</p>
+        <h2 id="privacy-title">Deine Datenschutzeinstellungen</h2>
+        <p id="privacy-description">Unsere Website verwendet keine Analyse- oder Werbe-Cookies. Nur mit deiner Zustimmung laden wir Google Fonts von Google-Servern. Dabei wird deine IP-Adresse an Google übertragen. Ohne Zustimmung bleibt die Website vollständig nutzbar. <a href="datenschutz.html">Mehr in der Datenschutzerklärung</a>.</p>
+        <div class="privacy-details" id="privacy-details" hidden>
+          <label class="privacy-choice"><input type="checkbox" id="privacy-fonts-optin"><span><strong>Externe Schriftarten (Google Fonts)</strong><small>Optional: Verbindung zu Google zur Darstellung der Web-Schriftarten. Ohne Einwilligung werden lokale Standardschriftarten verwendet.</small></span></label>
+          <p class="privacy-essential">Notwendig: Deine Auswahl wird ausschließlich in diesem Browser gespeichert, damit wir dich nicht bei jedem Besuch erneut fragen.</p>
+        </div>
+      </div>
+      <div class="privacy-actions">
+        <button type="button" class="privacy-action privacy-action-neutral" data-privacy-reject>Nur notwendige</button>
+        <button type="button" class="privacy-action privacy-action-neutral" data-privacy-settings>Einstellungen</button>
+        <button type="button" class="privacy-action privacy-action-accept" data-privacy-accept>Alle akzeptieren</button>
+        <button type="button" class="privacy-action privacy-action-save" data-privacy-save hidden>Auswahl speichern</button>
+      </div>
+    </div>
+  </section>
+  <script src="consent.js?v=1"></script>
 </body>
 </html>
