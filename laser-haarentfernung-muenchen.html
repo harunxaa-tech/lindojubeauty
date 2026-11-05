@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#fff8f6">
+  <script>
+    // Bei einem echten Neuladen auf einer Behandlungs-Unterseite zur Startseite wechseln.
+    // Normale Aufrufe über Google oder Links bleiben auf der jeweiligen Unterseite.
+    (() => {
+      const nav = performance.getEntriesByType?.('navigation')?.[0];
+      const reloaded = nav ? nav.type === 'reload' : performance.navigation?.type === 1;
+      if (reloaded) window.location.replace('https://lindojubeauty.de/');
+    })();
+  </script>
   <title>Laser-Haarentfernung München | Diodenlaser – Lindoju Beauty</title>
   <meta name="description" content="Laser-Haarentfernung mit Diodenlaser in München bei Lindoju Beauty. Zonen, Preise und Ablauf entdecken. Studio in der Corneliusstraße 38.">
   <meta name="robots" content="index, follow">
