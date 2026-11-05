@@ -915,3 +915,10 @@ h1,h2,h3,h4{margin:0 0 16px;font-family:"Cormorant Garamond",Georgia,serif;font-
 .legal-card a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
 .legal-card ul{margin:0 0 16px;padding-left:23px;color:var(--muted);line-height:1.7}
 @media(max-width:760px){.privacy-banner{padding:10px;max-height:85dvh}.privacy-banner-inner{display:block;padding:18px;border-radius:18px}.privacy-actions{max-width:none;min-width:0;justify-content:stretch;margin-top:15px;display:grid;grid-template-columns:1fr 1fr}.privacy-action{padding:11px 12px}.privacy-action-accept{grid-column:1/-1}.privacy-action-save{grid-column:1/-1}.privacy-banner h2{font-size:1.9rem}.privacy-banner p{font-size:.83rem}}
+
+/* Links zu den eigenständigen SEO-Behandlungsseiten auf der Startseite */
+.seo-service-links{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 25px}
+.seo-service-links a{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid var(--gold);background:rgba(255,255,255,.86);color:var(--text);font-size:.84rem;font-weight:800;text-decoration:none;transition:background .18s,border-color .18s}
+.seo-service-links a:hover,.seo-service-links a:focus-visible{background:#f2e4da;border-color:var(--gold-deep)}
+.seo-treatment-link{display:inline-flex;margin:14px 0 0}
+@media(max-width:650px){.seo-service-links{display:grid;grid-template-columns:1fr;gap:9px}.seo-service-links a{width:100%;text-align:center}}
