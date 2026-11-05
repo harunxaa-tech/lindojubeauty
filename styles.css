@@ -928,3 +928,7 @@ h1,h2,h3,h4{margin:0 0 16px;font-family:"Cormorant Garamond",Georgia,serif;font-
 .seo-service-links a:hover,.seo-service-links a:focus-visible{background:#f2e4da;border-color:var(--gold-deep)}
 .seo-treatment-link{display:inline-flex;margin:14px 0 0}
 @media(max-width:650px){.seo-service-links{display:grid;grid-template-columns:1fr;gap:9px}.seo-service-links a{width:100%;text-align:center}}
+
+/* Ruhigere Typografie für die Leistungsüberschrift auf kleinen Displays */
+#leistungen .section-head h2{max-width:750px;line-height:1.08;text-wrap:balance}
+@media (max-width:720px){#leistungen .section-head h2{font-size:clamp(2.15rem,8.2vw,2.8rem);line-height:1.13;letter-spacing:-.018em;max-width:18ch}}
