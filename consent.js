@@ -58,6 +58,12 @@
   document.querySelectorAll('[data-privacy-open]').forEach(button => button.addEventListener('click', openSettings));
 
   const current = readChoice();
-  if (!current) banner.hidden = false;
-  else if (current.fonts) loadOptionalFonts();
+  if (current) {
+    // A saved choice must suppress the notice on all page reloads.
+    banner.hidden = true;
+    if (current.fonts) loadOptionalFonts();
+  } else {
+    // First visit: the HTML also renders the notice if this script was not loaded.
+    banner.hidden = false;
+  }
 })();
